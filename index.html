@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Haiku Generator</title>
     <link rel="stylesheet" href="sources/style.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
 </head>
 
@@ -18,12 +19,12 @@
         </header>
         <main>
 
-            <form action="">
+            <form action="" id="haiku-form">
                 <input type="input" placeholder="write a word to generate a haiku about it" autofocus required
                     class="instructions">
                 <input type="submit" name="Generate" id="submit-button" class="submit-button">
             </form>
-            <div class="poem"></div>
+            <div class="poem" id="poem"></div>
 
         </main>
 
