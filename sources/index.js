@@ -20,6 +20,10 @@ function generateHaiku(event) {
   let prompt = `write a haiku about ${userInstructions.value}.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `<span class="blink">⏳ Generating a Haiku about ${userInstructions.value}</span>`;
+
   axios.get(apiUrl).then(publishHaiku);
 }
 
